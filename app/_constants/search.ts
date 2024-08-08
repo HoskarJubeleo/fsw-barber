@@ -9,7 +9,7 @@ export const quickSearchOptions: QuickSearchOption[] = [
     title: "Cabelo",
   },
   {
-    imageUrl: "/.barba.svg",
+    imageUrl: "/barba.svg",
     title: "Barba",
   },
   {
