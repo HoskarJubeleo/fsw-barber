@@ -20,7 +20,8 @@ const Home = async () => {
     <div>
       <Header />
       <div className="p-5">
-        <h2 className="text-xl font-bold">Olá, Jamal190</h2>
+        <h2 className="text-xl font-bold">Olá você fala comigo bebe</h2>
+
         <p>Segunda-feira, 05 de Agosto.</p>
 
         <div className="mt-6 flex items-center gap-2">
