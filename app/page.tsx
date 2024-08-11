@@ -1,12 +1,11 @@
-import { SearchIcon } from "lucide-react"
 import Header from "./_components/header"
 import { Button } from "./_components/ui/button"
-import { Input } from "./_components/ui/input"
 import Image from "next/image"
 import { db } from "./_lib/prisma"
-import BarbershopItem from "./_components/barbershop-items"
+import BarbershopItem from "./_components/barbershop-item"
 import { quickSearchOptions } from "./_constants/search"
 import BookingItem from "./_components/booking-item"
+import Search from "./_components/search"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -20,15 +19,11 @@ const Home = async () => {
     <div>
       <Header />
       <div className="p-5">
-        <h2 className="text-xl font-bold">Olá você fala comigo bebe</h2>
-
+        <h2 className="text-xl font-bold">Olá você, fala comigo bebe</h2>
         <p>Segunda-feira, 05 de Agosto.</p>
 
-        <div className="mt-6 flex items-center gap-2">
-          <Input placeholder="Pesquisar" />
-          <Button size="icon">
-            <SearchIcon />
-          </Button>
+        <div className="mt-6">
+          <Search />
         </div>
 
         <div className="[&:: -webkit-scrollbar]:hidden mt-6 flex gap-3 overflow-x-scroll">
